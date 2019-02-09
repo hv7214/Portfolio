@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Anonymous Pro" rel="stylesheet">
+    <link rel="stylesheet" href= "./pf-base.css" />
+    <link rel="stylesheet" href= "./pf-flex.css" />
+    <title>About</title>
+  </head>
+  <body>
+    <div class="container">
+    <video autoplay muted loop id="myVideo">
+  <source src="bgvid.mp4" type="video/mp4">
+</video>
+
+<div class="abouttxt1">
+<u><h1>ABOUT ME</h1></u>
+</div>
+<div class="abouttxt2">
+  <div class="abouttxt2_txt">
+
+
+<p>&nbsp&nbsp&nbsp&nbsp&nbsp I am Harshit Verma, first of all thanks to giving a look here. I am a  UG student in IIT Roorkee, pursuing Computer
+  Science Engineering.<br><br>&nbsp&nbsp&nbsp&nbsp&nbsp
+  I love exploring stuffs that are more abstracted, because they generate a wave of curoisity in me. This habit lead me to explore Network Security.
+  I always used to think how codes written in High Level Language would communicate to hardware, how just it instruct latter to do perform some task.This got me into NETSEC.
+  <br><br>&nbsp&nbsp&nbsp&nbsp&nbsp
+  I also develop web apps on Node.js and CLI tools too on Node.js. I have also been into game dev, I made one-to-one 2.5D fighting game
+  Marvel vs DC in my 1st semester during WOC.<br><br>
+  I am also contributing in some open source projects, just to get a good feel of doing something free of cost(lol!).
+  I am still expanding my domain in field on Computer Science.<br><br><br>
+
+<p style="text-align:right ; font-weight:bold">Thank you!</p>  </div >
+
+
+</div>
+</div>
+
+<script type="text/javascript">
+  function ajaxreq(){
+
+      var xmlreq = new XMLHttpRequest();
+      xmlreq.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        document.getElementById("container").innerHTML = xmlreq.responseText;
+      }
+    };
+    xmlreq.open("GET", "intro.txt", true);
+    xmlreq.send();
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Alegreya SC' rel='stylesheet'>
+    <link rel="stylesheet" href= "./pf-base.css" />
+    <link rel="stylesheet" href="./pf-flex.css"/>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/ >
+    <title>Portfolio</title>
+
+  </head>
+  <body>
+<div class="Main" id="main">
+<div class="textouter">
+
+<div class="textinner">
+  <h1 class="introtxt anim-typewriter">Hey! This is Harshit Verma</h1>
+</div>
+
+<div class="homebutton">
+<button type="button" class="btn" onclick="ajaxreq2()">Home</button>
+</div>
+
+</div>
+  <div class="Intro" id="intro">
+
+  </div>
+
+  <div class="intro2">
+    <div class="flip-cards">
+
+      <div class="fp-inner">
+
+        <div class="fp-front">
+        <h1 class="txtintro2" >About me</h1>
+      </div>
+
+      <div class="fp-back fp-back1">
+        <h1>Harshit Verma</h1>
+        <p>Computer Science Engineer</p>
+        <p>Network Security Enthusiast</p><br>
+        <a href="javascript:ajaxreq()"  id="link">Learn more</a>
+      </div>
+
+    </div>
+
+</div>
+<div class="flip-cards">
+
+    <div class="fp-inner">
+
+      <div class="fp-front">
+        <h1 class="txtintro2" >Contact</h1>
+      </div>
+
+      <div class="fp-back fp-back2">
+        <div class="imgcon1"><a href="https://www.facebook.com/harshit.verma.1806253"><img src="./ficon.gif" width="80px" height="80px" alt="fb"></a></div>
+        <div class="imgcon2"><a href="https://github.com/hv7214?tab=repositories"><img src="./gicon.png" width="80px" height="80px" alt="github"></a></div>
+        <div class="imgcon3"><a href="mailto:hverma1@cs.iitr.ac.in"><img src="./icons8-gmail-480.png" width="80px" height="80px" alt="gmail"></a></div>
+      </div>
+
+    </div>
+</div>
+
+<div class="flip-cards flip-cards3">
+
+    <div class="fp-inner">
+
+      <div class="fp-front">
+        <h1 class="txtintro2">Accomplishments</h1>
+      </div>
+
+      <div class="fp-back">
+      <ul>
+        <li>Cleared JEE Adv. with rank of 1445.
+        <li>3rd rank in NCO(National Cyber Olympiad).
+        <li>My proposal was selected and passed in Winter of Code(WOC).
+      </ul>
+      <br>
+      <b>More accomplishments is yet to be achievied.</b>
+      </div>
+
+    </div>
+  </div>
+  <div class="flip-cards flip-cards4">
+
+      <div class="fp-inner">
+
+        <div class="fp-front">
+          <h1 class="txtintro2">Projects</h1>
+        </div>
+
+        <div class="fp-back fpback4">
+        <ul>
+          <li>Developed one-to-one 2.5D fighting game,Marvel vs DC on UE4 in WOC.
+          <li>Developed CLI tools with Node.js
+            <ol>
+              <li><u>Filor</u>-file manager
+              <li><u>Conmang</u> - Contact manager
+              <li><u>Fbally</u> - Under development
+            </ol>
+          <li>Made oauth on Node.js.
+          <li> Currently working on Probot.
+        </ul>
+        <b>Looking ahead for more projects.</b>
+        </div>
+
+      </div>
+</div>
+</div>
+</div>
+<script type="text/javascript">
+  function ajaxreq(){
+
+      var xmlreq = new XMLHttpRequest();
+      xmlreq.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        document.getElementById("intro").innerHTML = xmlreq.responseText;
+      }
+    };
+    xmlreq.open("GET", "about.txt", true);
+    xmlreq.send();
+  }
+  function ajaxreq2(){
+
+      var xmlreq = new XMLHttpRequest();
+      xmlreq.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        document.getElementById("intro").innerHTML = xmlreq.responseText;
+      }
+    };
+    xmlreq.open("GET", "intro.txt", true);
+    xmlreq.send();
+  }
+</script>
+  </body>
+</html>
